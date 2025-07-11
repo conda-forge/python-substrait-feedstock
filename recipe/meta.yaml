@@ -1,5 +1,5 @@
 {% set name = "substrait" %}
-{% set version = "0.23.0" %}
+{% set version = "0.24.1" %}
 
 package:
   name: python-{{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/substrait-{{ version }}.tar.gz
-  sha256: 456e52ba2643616189c939d7f48044232e8d371772fdafbec0ead20c54ab790f
+  sha256: e25e131c0709ae64d43d020f49f13e7ab02e9de72c5aafbd3304bc1d71bf7af1
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
-  number: 1
+  number: 0
 
 requirements:
   host:
