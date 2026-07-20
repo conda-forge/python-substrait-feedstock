@@ -1,5 +1,5 @@
 {% set name = "substrait" %}
-{% set version = "0.27.0" %}
+{% set version = "0.28.0" %}
 
 package:
   name: python-{{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/substrait-{{ version }}.tar.gz
-  sha256: 73d6f90465c8138a10fb912c669a840abb95b04060c7d31faf331e38901bfb0a
+  sha256: 0d73925a7fefb0503637d3dad35e70e14e74b2a72fa624ab95514ed79a067cac
 
 build:
   noarch: python
@@ -21,6 +21,7 @@ requirements:
   run:
     - protobuf >=5,<7
     - python >={{ python_min }}
+    - python-substrait-extensions ==0.79.0
     - python-substrait-protobuf ==0.79.0
 
 test:
