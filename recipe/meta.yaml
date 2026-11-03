@@ -1,5 +1,5 @@
 {% set name = "substrait" %}
-{% set version = "0.37.0" %}
+{% set version = "0.37.1" %}
 
 package:
   name: python-{{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/substrait-{{ version }}.tar.gz
-  sha256: 5266adfb771bf0a057a3b515be42e125c07517b6e8d8902d470ffc6402351fc9
+  sha256: bdb90dc48a505d3fb59b8f80b4eaae94ab965b124bffffcdc81b720daf253171
 
 build:
   noarch: python
@@ -21,7 +21,7 @@ requirements:
     - setuptools >=61
     - setuptools_scm >=6.2
   run:
-    - protobuf <7,>=5
+    - protobuf <8,>=5
     - python >={{ python_min }}
     - python-substrait-extensions ==0.106.0
     - python-substrait-protobuf ==0.106.0
@@ -44,6 +44,10 @@ requirements:
     # - sqloxide 
     # - pyyaml 
     # - python-substrait-antlr ==0.100.0
+    # - deepdiff 
+    # - sqloxide 
+    # - pyyaml 
+    # - python-substrait-antlr ==0.106.0
     # - deepdiff 
     # - sqloxide 
     # - pyyaml 
